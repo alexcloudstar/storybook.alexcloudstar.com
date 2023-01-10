@@ -21,6 +21,14 @@ module.exports = {
 
     return mergeConfig(config, {
       ...userConfig,
+        define: {
+          ...config.define,
+            global: "window",
+        },
+        esbuild: {
+          ...config.esbuild,
+            jsxInject: `import React from 'react'`,
+        },
       plugins: [],
     })
   },
