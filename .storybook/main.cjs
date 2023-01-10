@@ -15,16 +15,13 @@ module.exports = {
     builder: '@storybook/builder-vite',
   },
   async viteFinal(config) {
-    return {
-      ...config,
-      define: {
-        ...config.define,
-        global: 'window',
-      },
-      esbuild: {
-        ...config.esbuild,
-        jsxInject: `import React from 'react'`,
-      },
-    }
+    const { config: userConfig } = await loadConfigFromFile(
+      path.resolve(__dirname, '../vite.config.ts')
+    )
+
+    return mergeConfig(config, {
+      ...userConfig,
+      plugins: [],
+    })
   },
 }
