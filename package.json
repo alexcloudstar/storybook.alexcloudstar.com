@@ -9,8 +9,9 @@
     "preview": "vite preview",
     "lint:scripts": "eslint --ext .ts,.tsx src",
     "lint:styles": "stylelint \"src/**/*.css\"",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "serve-storybook": "serve storybook-static"
   },
   "dependencies": {
     "react": "^18.2.0",
