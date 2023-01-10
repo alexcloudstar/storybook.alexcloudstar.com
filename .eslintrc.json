@@ -17,8 +17,10 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react", "@typescript-eslint", "prettier", "import"],
   "rules": {
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
