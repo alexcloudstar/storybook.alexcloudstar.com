@@ -1,3 +1,5 @@
+import '../src/index.css'
+
 import * as jest from 'jest-mock'
 window.jest = jest
 
