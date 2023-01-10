@@ -12,6 +12,12 @@ export default {
         defaultValue: 'Button',
       },
     },
+    icon: {
+      control: {
+        type: 'text',
+        default: '!',
+      },
+    },
   },
 } as ComponentMeta<typeof Button>
 
