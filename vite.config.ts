@@ -1,9 +1,9 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import { chunkSplitPlugin } from 'vite-plugin-chunk-split'
+
 
 export default defineConfig({
-  plugins: [react(), chunkSplitPlugin()],
+  plugins: [react(), ],
   define: {
     'process.env': process.env,
   },
