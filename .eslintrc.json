@@ -8,14 +8,16 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "./tsconfig.json"
   ],
+  "include": ["src", "./vite.config.ts"],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": ["./tsconfig.json"]
   },
   "plugins": ["react", "@typescript-eslint", "prettier", "import"],
   "rules": {
