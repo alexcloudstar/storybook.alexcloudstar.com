@@ -1,14 +1,13 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
+import { chunkSplitPlugin } from 'vite-plugin-chunk-split'
 
-
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  // resolve: {
-  //   alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
-  // },
+  plugins: [react(), chunkSplitPlugin()],
   define: {
     'process.env': process.env,
+  },
+  build: {
+    chunkSizeWarningLimit: 1600,
   },
 })
