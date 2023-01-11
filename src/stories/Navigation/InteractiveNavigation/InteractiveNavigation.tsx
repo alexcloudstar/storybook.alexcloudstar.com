@@ -1,15 +1,14 @@
 import React, { FC, useEffect } from 'react'
+
 import classes from './InteractiveNavigation.module.css'
 
 type InteractiveNavigationProps = {
   color?: string
 }
 
-const InteractiveNavigation: FC<InteractiveNavigationProps> = ({color}) => {
-
+const InteractiveNavigation: FC<InteractiveNavigationProps> = ({ color }) => {
   useEffect(() => {
-    document.documentElement.style
-    .setProperty('--color', color);
+    document.documentElement.style.setProperty('--color', color)
   }, [color])
 
   return (

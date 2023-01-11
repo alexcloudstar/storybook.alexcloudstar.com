@@ -14,5 +14,5 @@ const Template: ComponentStory<typeof InteractiveNavigation> = (args) => (
 export const Default = Template.bind({})
 
 Default.args = {
-  color: "#00b2ff"
+  color: '#00b2ff',
 }

@@ -57,5 +57,10 @@
       }
     ]
   },
-  "ignorePatterns": [".eslintrc.js"]
+  "ignorePatterns": [".eslintrc.js"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
