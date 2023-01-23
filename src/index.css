@@ -20,3 +20,11 @@ a {
   color: #fff;
   text-decoration: none;
 }
+
+.button {
+  background: transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 5px solid transparent;
+  border-radius: 1.75rem;
+}
