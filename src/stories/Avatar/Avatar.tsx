@@ -44,21 +44,24 @@ const Avatar: FC<AvatarProps> = ({
       rounded ? '50%' : '0'
     )
 
-    document.documentElement.style.setProperty(
-      '--top',
-      rounded ? `${(-1 * borderWidth) / 2}px` : '0'
-    )
+    if (rounded && !effect) {
+      document.documentElement.style.setProperty(
+        '--top',
+        rounded && !effect ? `${(-1 * borderWidth) / 2}px` : '-10px'
+      )
 
-    document.documentElement.style.setProperty(
-      '--left',
-      rounded ? `${(-1 * borderWidth) / 2}px` : '0'
-    )
+      document.documentElement.style.setProperty(
+        '--left',
+        rounded && !effect ? `${(-1 * borderWidth) / 2}px` : '-10px'
+      )
+    }
+
+    if (!rounded && !effect) {
+      document.documentElement.style.setProperty('--top', '0')
+
+      document.documentElement.style.setProperty('--left', '0')
+    }
   }, [rounded, borderWidth])
-
-  useEffect(() => {
-    document.documentElement.style.setProperty('--top', effect ? '-10px' : '0')
-    document.documentElement.style.setProperty('--left', effect ? '-10px' : '0')
-  }, [effect])
 
   return (
     <div
