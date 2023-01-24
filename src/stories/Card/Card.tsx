@@ -53,10 +53,10 @@ const Card: FC<CardProps> = ({
     </div>
     {subTitle && subDescription ? (
       <div className="px-6 flex flex-row py-7">
-        <h4 className="font-regular text-base text-[#42446E] whitespace-nowrap">
+        <h4 className="font-regular text-base text-[#42446E] dark:text-white whitespace-nowrap">
           {subTitle}
         </h4>
-        <span className="text-base ml-2 font-light text-[#42446E] whitespace-normal">
+        <span className="text-base ml-2 font-light text-[#42446E] dark:text-white whitespace-normal">
           {subDescription}
         </span>
       </div>
