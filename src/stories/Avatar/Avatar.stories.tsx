@@ -88,7 +88,8 @@ Circle.args = {
   width: 300,
   height: 300,
   borderWidth: 20,
-  borderColor: '#327da8',
+  borderColor:
+    'linear-gradient(175deg, rgba(231,15,170,1) 0%, rgba(0,192,253,1) 100%)',
   rounded: true,
   effect: false,
 }

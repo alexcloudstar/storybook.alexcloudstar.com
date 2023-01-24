@@ -27,12 +27,3 @@
   background: var(--borderColor);
   border-radius: var(--rounded);
 }
-
-/* linear-gradient(
-    175deg,
-    rgb(231 15 170 / 100%) 0%,
-    rgb(0 192 253 / 100%) 100%
-  ); */
-
-/*   top: var(--top);
-  left: var(--left); */
