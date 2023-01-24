@@ -32,7 +32,7 @@ const Card: FC<CardProps> = ({
   subDescription,
 }) => (
   <div
-    className="w-[373px] rounded-3xl"
+    className="w-[373px] rounded-3xl shadow"
     style={{
       background,
     }}
@@ -40,7 +40,7 @@ const Card: FC<CardProps> = ({
     <img
       src={image}
       alt={title}
-      className="rounded-3xl w-full max-w-[375px] max-h-[260px]"
+      className="rounded-t-3xl w-full max-w-[375px] max-h-[260px]"
     />
     <div className="px-6" style={{ color }}>
       <h3 className="text-3xl font-medium mt-7">{title}</h3>
