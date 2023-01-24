@@ -8,7 +8,7 @@ type InteractiveNavigationProps = {
 
 const InteractiveNavigation: FC<InteractiveNavigationProps> = ({ color }) => {
   useEffect(() => {
-    document.documentElement.style.setProperty('--color', color)
+    document.documentElement.style.setProperty('--color', color ?? '#fff')
   }, [color])
 
   return (

@@ -1,0 +1,29 @@
+:root {
+  --borderColor: #00a3ff;
+  --borderWidth: 20px;
+  --borderHeight: 20px;
+  --rounded: 50%;
+  --top: -10px;
+  --bottom: -10px;
+}
+
+.gradientBorder {
+  position: relative;
+  display: inline-block;
+}
+
+.gradientBorder img {
+  border-radius: var(--rounded);
+}
+
+.gradientBorder::before {
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  z-index: -1;
+  width: calc(100% + var(--borderWidth));
+  height: calc(100% + var(--borderHeight));
+  content: '';
+  background: var(--borderColor);
+  border-radius: var(--rounded);
+}
