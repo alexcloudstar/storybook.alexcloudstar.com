@@ -45,7 +45,7 @@ const Card: FC<CardProps> = ({
     <div className="px-6" style={{ color }}>
       <h3 className="text-3xl font-medium mt-7">{title}</h3>
       <p
-        className={`text-lg font-light mt-5 ${subTitle ? '' : 'mb-7'}`}
+        className={`text-lg font-light mt-5 ${subTitle ? '' : 'pb-7'}`}
         style={{ color: color ? color : '#666666' }}
       >
         {description}
