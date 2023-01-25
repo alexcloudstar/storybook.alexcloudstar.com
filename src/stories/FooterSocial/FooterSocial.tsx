@@ -1,8 +1,8 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 
 type SocialType = {
   url: string
-  icon: string
+  icon: ReactNode
 }
 
 export type FooterSocialProps = {
@@ -40,9 +40,12 @@ const FooterSocial: FC<FooterSocialProps> = ({
           </span>
         ) : null}
         {social?.length ? (
-          <div>
+          <div className="flex">
             {social.map((item) => (
-              <a href={item.url} className="text-gray-700 mx-4 dark:text-white">
+              <a
+                href={item.url}
+                className="text-gray-700 mx-4 dark:text-white text-3xl"
+              >
                 {item.icon}
               </a>
             ))}

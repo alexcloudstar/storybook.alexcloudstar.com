@@ -1,5 +1,11 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
+import {
+  AiFillGithub,
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+} from 'react-icons/ai'
+
 import FooterSocial from './FooterSocial'
 
 const defaultValues = {
@@ -9,15 +15,15 @@ const defaultValues = {
   social: [
     {
       url: 'https://google.com',
-      icon: '🕸️',
+      icon: <AiFillGithub />,
     },
     {
       url: 'https://google.com',
-      icon: '🛸',
+      icon: <AiFillTwitterCircle />,
     },
     {
       url: 'https://google.com',
-      icon: '🚀',
+      icon: <AiFillLinkedin />,
     },
   ],
 }
