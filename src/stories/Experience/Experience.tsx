@@ -1,7 +1,6 @@
 import { FC } from 'react'
+import { FaBuilding, FaCalendarAlt, FaLocationArrow } from 'react-icons/fa'
 import { Pill } from '../Pill'
-import { HiBuildingOffice2 } from 'react-icons/hi2'
-import { FaLocationArrow, FaCalendarAlt } from 'react-icons/fa'
 
 export type ExperienceProps = {
   pillProps: {
@@ -34,13 +33,13 @@ const Experience: FC<ExperienceProps> = ({
       </div>
       <div className="flex justify-between items-center">
         <div className="flex items-center">
-          <h5 className="text-[#A7A7A7] mr-8 flex items-center">
+          <h5 className="text-[#A7A7A7] mr-8 flex items-center text-md">
             <span className="mr-2">
-              <HiBuildingOffice2 />
+              <FaBuilding />
             </span>
             {company}
           </h5>
-          <h6 className="text-[#A7A7A7] flex items-center">
+          <h6 className="text-[#A7A7A7] flex items-center text-md">
             <span className="mr-2">
               <FaLocationArrow />
             </span>
@@ -48,7 +47,7 @@ const Experience: FC<ExperienceProps> = ({
           </h6>
         </div>
         <div>
-          <span className="text-[#A7A7A7] flex items-center">
+          <span className="text-[#A7A7A7] flex items-center text-md">
             <span className="mr-2">
               <FaCalendarAlt />
             </span>

@@ -1,4 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { AiOutlineLink, AiFillGithub } from 'react-icons/ai'
 
 import Card from './Card'
 
@@ -57,12 +58,12 @@ WithLinks.args = {
     link1: {
       text: 'Live Preview',
       url: 'https://google.com',
-      icon: '🕸️',
+      icon: <AiOutlineLink />,
     },
     link2: {
       text: 'View Code',
       url: 'https://google.com',
-      icon: '💻',
+      icon: <AiFillGithub />,
     },
   },
 }
@@ -81,12 +82,12 @@ WithSubTitle.args = {
     link1: {
       text: 'Live Preview',
       url: 'https://google.com',
-      icon: '🕸️',
+      icon: <AiOutlineLink />,
     },
     link2: {
       text: 'View Code',
       url: 'https://google.com',
-      icon: '💻',
+      icon: <AiFillGithub />,
     },
   },
 }

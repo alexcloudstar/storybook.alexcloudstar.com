@@ -1,10 +1,9 @@
-import React, { FC } from 'react'
-import { WithLinks } from './Card.stories'
+import { FC, ReactNode } from 'react'
 
 type LinkProps = {
   text: string
   url: string
-  icon: any
+  icon: ReactNode
 }
 
 export type CardProps = {
