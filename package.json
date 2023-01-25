@@ -1,7 +1,7 @@
 {
   "name": "alex-cloudstar-storybook",
   "private": false,
-  "version": "0.0.58",
+  "version": "0.0.59",
   "type": "module",
   "homepage": "https://storybook.alexcloudstar.com/",
   "license": "MIT",
@@ -14,6 +14,10 @@
     "type": "git",
     "url": "https://github.com/alexcloudstar/storybook.alexcloudstar.com"
   },
+  "files": [
+    "storybook-static"
+  ],
+  "main": "storybook-static/index.js",
   "scripts": {
     "lint:scripts": "eslint --ext .ts,.tsx src --fix",
     "lint:styles": "stylelint \"src/**/*.css\" --fix",
