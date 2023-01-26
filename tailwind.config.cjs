@@ -33,5 +33,12 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [{ tailwindcss: {} }, { autoprefixer: {} }],
+  // corePlugins: {
+  //   preflight: false,
+  // },
+  // purge: {
+  //   enabled: true,
+  //   content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  // },
 }

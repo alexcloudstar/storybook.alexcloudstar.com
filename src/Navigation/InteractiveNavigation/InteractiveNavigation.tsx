@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react'
 
-import classes from './InteractiveNavigation.module.css'
+// import classes from './InteractiveNavigation.module.css'
 
 type InteractiveNavigationProps = {
   color?: string
@@ -15,29 +15,19 @@ const InteractiveNavigation: FC<InteractiveNavigationProps> = ({ color }) => {
     <nav>
       <ul>
         <li>
-          <a href="#" className={classes.link}>
-            Store
-          </a>
+          <a href="#">Store</a>
         </li>
         <li>
-          <a href="#" className={classes.link}>
-            Mac
-          </a>
+          <a href="#">Mac</a>
         </li>
         <li>
-          <a href="#" className={classes.link}>
-            iPad
-          </a>
+          <a href="#">iPad</a>
         </li>
         <li>
-          <a href="#" className={classes.link}>
-            iPhone
-          </a>
+          <a href="#">iPhone</a>
         </li>
         <li>
-          <a href="#" className={classes.link}>
-            Watch
-          </a>
+          <a href="#">Watch</a>
         </li>
       </ul>
     </nav>

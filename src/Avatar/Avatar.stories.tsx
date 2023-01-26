@@ -100,7 +100,7 @@ Effect.args = {
   alt: 'Alex Cloudstar Profile Avatar',
   width: 300,
   height: 300,
-  borderWidth: 0,
+  borderWidth: 20,
   borderColor: '#327da8',
   rounded: false,
   effect: true,

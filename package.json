@@ -1,28 +1,34 @@
 {
-  "name": "alex-cloudstar-storybook",
-  "private": false,
-  "version": "0.0.59",
+  "name": "@alexcloudstar/alex-cloudstar-storybook",
+  "version": "0.0.60",
   "type": "module",
   "homepage": "https://storybook.alexcloudstar.com/",
   "license": "MIT",
-  "author": {
-    "name": "alexcloudstar",
-    "url": "https://github.com/alexcloudstar/",
-    "email": "alexcloudstar@gmail.com"
-  },
+  "author": "alexcloudstar <alexcloudstar@gmail.com> (https://github.com/alexcloudstar/)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexcloudstar/storybook.alexcloudstar.com"
+    "url": "git+https://github.com/alexcloudstar/storybook.alexcloudstar.com.git"
   },
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "files": [
-    "storybook-static"
+    "dist"
   ],
-  "main": "storybook-static/index.js",
   "scripts": {
     "lint:scripts": "eslint --ext .ts,.tsx src --fix",
     "lint:styles": "stylelint \"src/**/*.css\" --fix",
     "dev": "start-storybook -p 6006 -s public",
-    "build": "build-storybook -s public",
+    "build": "tsc && vite build",
+    "build-storybook": "build-storybook -s public",
     "serve": "serve storybook-static"
   },
   "dependencies": {
@@ -31,7 +37,9 @@
     "react-icons": "^4.7.1"
   },
   "devDependencies": {
+    "vite-plugin-css-injected-by-js": "^2.4.0",
     "@babel/core": "^7.20.12",
+    "@rollup/plugin-typescript": "^11.0.0",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
     "@storybook/addon-interactions": "^6.5.15",
@@ -55,6 +63,7 @@
     "eslint-plugin-storybook": "^0.6.8",
     "postcss": "^8.4.21",
     "prettier": "^2.8.2",
+    "rollup-plugin-typescript-paths": "^1.4.0",
     "storybook-dark-mode": "^2.0.5",
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
@@ -62,6 +71,11 @@
     "stylelint-config-standard": "^29.0.0",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.3",
-    "vite": "^4.0.0"
+    "vite": "^4.0.0",
+    "vite-plugin-css-modules": "^0.0.1"
+  },
+  "description": "<h1>Alex Cloudstar Storybook Components</h1> <h2>WIP</h2>",
+  "bugs": {
+    "url": "https://github.com/alexcloudstar/storybook.alexcloudstar.com/issues"
   }
 }

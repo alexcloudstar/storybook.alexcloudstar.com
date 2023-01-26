@@ -27,3 +27,4 @@ dist-ssr
 .idea
 
 storybook-static
+yarn-error.log
