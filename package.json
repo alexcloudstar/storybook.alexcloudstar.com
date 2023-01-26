@@ -1,6 +1,6 @@
 {
-  "name": "@alexcloudstar/alex-cloudstar-storybook",
-  "version": "0.0.60",
+  "name": "@alexcloudstar/story-ui",
+  "version": "0.0.61",
   "type": "module",
   "homepage": "https://storybook.alexcloudstar.com/",
   "license": "MIT",
