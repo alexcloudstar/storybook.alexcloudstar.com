@@ -11,11 +11,11 @@ export default {
         type: 'object',
       },
       defaultValue: [
-        'Reputation',
-        'New users',
-        'Voters',
-        'Editors',
-        'Moderators',
+        { id: 0, text: 'Reputation' },
+        { id: 1, text: 'New users' },
+        { id: 2, text: 'Voters' },
+        { id: 3, text: 'Editors' },
+        { id: 4, text: 'Moderators' },
       ],
     },
     users: {

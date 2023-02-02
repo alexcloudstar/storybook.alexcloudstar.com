@@ -1,15 +1,25 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { GoSearch } from 'react-icons/go'
 import { type UserCardProps } from '../UserCard/UserCard'
 import { UserCard } from '..'
 
+export type ButtonProps = {
+  id: number
+  text: string
+}
+
 export type UsersListProps = {
-  buttons: string[]
+  buttons: ButtonProps[]
   users: UserCardProps[]
 }
 
 const UsersList: FC<UsersListProps> = ({ buttons, users }) => {
-  console.log(buttons)
+  const [activeButton, setActiveButton] = useState(buttons[1])
+
+  const handleButtonClick = (button: ButtonProps) => {
+    setActiveButton(button)
+  }
+
   return (
     <div className="container max-w-[1213px] h-[830px] p-24 rounded-3xl flex flex-col bg-green-600">
       <h5 className="text-[#151B32] text-3xl font-black mb-14">Users</h5>
@@ -24,10 +34,17 @@ const UsersList: FC<UsersListProps> = ({ buttons, users }) => {
         </div>
         <div className="filters">
           <ul className="flex items-center">
-            {buttons?.map((button, key) => (
-              <li className="mx-3" key={key}>
-                <button className="text-base font-medium text-[#151B32] p-4">
-                  {button}
+            {buttons?.map(({ id, text }) => (
+              <li className="mx-3" key={id}>
+                <button
+                  className={`text-base font-medium p-4 ${
+                    id === activeButton.id
+                      ? 'bg-[#849FFF] rounded-lg text-[#fff]'
+                      : 'text-[#151B32]'
+                  }`}
+                  onClick={() => handleButtonClick({ id, text })}
+                >
+                  {text}
                 </button>
               </li>
             ))}
