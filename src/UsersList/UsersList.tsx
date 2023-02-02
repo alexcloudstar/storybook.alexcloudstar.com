@@ -1,14 +1,15 @@
 import { FC } from 'react'
 import { GoSearch } from 'react-icons/go'
-import { Pill } from '..'
+import { type UserCardProps } from '../UserCard/UserCard'
+import { UserCard } from '..'
 
-export type UsersList = {
-  text: string
-  color: string
-  background: string
+export type UsersListProps = {
+  buttons: string[]
+  users: UserCardProps[]
 }
 
-const UsersList: FC<UsersList> = () => {
+const UsersList: FC<UsersListProps> = ({ buttons, users }) => {
+  console.log(buttons)
   return (
     <div className="container max-w-[1213px] h-[830px] p-24 rounded-3xl flex flex-col bg-green-600">
       <h5 className="text-[#151B32] text-3xl font-black mb-14">Users</h5>
@@ -23,56 +24,55 @@ const UsersList: FC<UsersList> = () => {
         </div>
         <div className="filters">
           <ul className="flex items-center">
-            <li className="mx-3">
-              <button className="text-base font-medium text-[#151B32] p-4">
-                Reputation
-              </button>
-            </li>
-            <li className="mx-3">
-              <button className="text-base font-medium text-white bg-[#849FFF] p-4 rounded-lg">
-                New users
-              </button>
-            </li>
-            <li className="mx-3">
-              <button className="text-base font-medium text-[#151B32] p-4">
-                Voters
-              </button>
-            </li>
-            <li className="mx-3">
-              <button className="text-base  font-medium text-[#151B32] p-4">
-                Editors
-              </button>
-            </li>
-            <li className="mx-3">
-              <button className="text-base font-medium text-[#151B32] p-4">
-                Moderators
-              </button>
-            </li>
+            {buttons?.map((button, key) => (
+              <li className="mx-3" key={key}>
+                <button className="text-base font-medium text-[#151B32] p-4">
+                  {button}
+                </button>
+              </li>
+            ))}
           </ul>
         </div>
       </header>
-      <div className="users">
-        <div className="user w-[327px] h-[208px] bg-[#FBFCFF] rounded-2xl pl-6 pt-6">
-          <div className="flex items-center">
-            <img
-              src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1696&q=80"
-              className="w-[97px] h-[97px] object-cover bg-blue-500 rounded-full"
-            />
-            <div className="user-info mt-4 ml-4">
-              <h6 className="username font-black text-lg">Lelah Nichols</h6>
-              <span className="text-sm font-medium">Troy, MI</span>
-              <div className="flex mt-4">
-                <Pill
-                  text="clothes"
-                  color="#516FD4"
-                  borderColor="#BFC8E6"
-                  style={{ marginRight: 5 }}
-                />
-                <Pill text="stem" color="#516FD4" borderColor="#BFC8E6" />
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="flex justify-center items-center gap-5">
+        <UserCard
+          name="Lelah Nichols"
+          location="Troy, MI"
+          image="https://images.unsplash.com/photo-1568038479111-87bf80659645?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80"
+          tags={['clothes', 'fashion', 'shoes']}
+        />
+        <UserCard
+          name="Jesus Weiss"
+          location="Fort Worth, TX"
+          image="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1696&q=80"
+          tags={['headset', 'gadget', 'speed', 'winter']}
+        />
+        <UserCard
+          name="Annie Rice"
+          location="Austin, TX"
+          image="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+          tags={['road', 'mountain', 'trip', 'earth', 'nature']}
+        />
+      </div>
+      <div className="flex justify-center items-center mt-4 gap-5">
+        <UserCard
+          name="Robert Brower"
+          location="Cincinnati, OH"
+          image="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+          tags={['Maintenance', 'gears', 'frames', 'repair']}
+        />
+        <UserCard
+          name="Amy Campbell"
+          location="Warrior, AL"
+          image="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+          tags={['music', 'disks']}
+        />
+        <UserCard
+          name="Anthony S. Morin"
+          location="Lyndhurst, NJ"
+          image="https://images.unsplash.com/photo-1522556189639-b150ed9c4330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+          tags={['vintage', 'electric']}
+        />
       </div>
     </div>
   )

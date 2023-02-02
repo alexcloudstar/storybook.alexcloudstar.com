@@ -17,7 +17,12 @@ const Pill: FC<PillProps> = ({
 }) => (
   <span
     className="flex justify-between items-center w-20	h-6 font-semibold text-xs rounded-full px-3 border border-solid"
-    style={{ background, color, borderColor: borderColor, ...style }}
+    style={{
+      background,
+      color,
+      borderColor: borderColor,
+      ...style,
+    }}
   >
     {text}
   </span>
