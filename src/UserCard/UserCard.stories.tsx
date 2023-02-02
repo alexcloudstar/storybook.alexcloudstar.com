@@ -25,7 +25,12 @@ export default {
       defaultValue:
         'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1696&q=80',
     },
-    tags: ['clothes', 'stem'],
+    tags: {
+      control: {
+        type: 'array',
+      },
+      defaultValue: ['clothes', 'stem'],
+    },
   },
 } as ComponentMeta<typeof UserCard>
 

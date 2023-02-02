@@ -20,7 +20,7 @@ const UserCard: FC<UserCardProps> = ({ name, location, image, tags }) => (
         <h6 className="font-black text-lg">{name}</h6>
         <span className="text-sm font-medium">{location}</span>
         <div className="flex mt-4 flex-wrap gap-0.5	">
-          {tags.map((targ, index) => (
+          {tags?.map((targ, index) => (
             <Pill
               text={targ}
               color="#516FD4"
