@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { GoSearch } from 'react-icons/go'
 import { Pill } from '..'
 
 export type UserCardProps = {

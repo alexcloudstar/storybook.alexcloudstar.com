@@ -42,10 +42,10 @@ const UsersList: FC<UsersListProps> = ({ buttons, users }) => {
   }
 
   return (
-    <div className="container max-w-[1213px] h-[830px] p-24 rounded-3xl flex flex-col">
+    <div className="max-w-[1213px] h-[830px] p-24 rounded-3xl flex flex-col">
       <h5 className="text-[#151B32] text-3xl font-black mb-14">Users</h5>
       <header className="flex items-center justify-between mb-[70px]">
-        <div className="search max-w-[327px] h-[56px] relative">
+        <div className="max-w-[327px] h-[56px] relative">
           <GoSearch className="absolute top-1/2 left-4 translate-y-[-50%] w-[32px] h-[32px]" />
           <input
             type="text"
@@ -55,7 +55,7 @@ const UsersList: FC<UsersListProps> = ({ buttons, users }) => {
             onChange={handleSearch}
           />
         </div>
-        <div className="filters">
+        <>
           <ul className="flex items-center">
             {buttons?.map(({ id, text }) => (
               <li className="mx-3" key={id}>
@@ -72,7 +72,7 @@ const UsersList: FC<UsersListProps> = ({ buttons, users }) => {
               </li>
             ))}
           </ul>
-        </div>
+        </>
       </header>
       <div className="flex justify-start items-center gap-5 flex-wrap">
         {filteredUsers?.map((user) => (
