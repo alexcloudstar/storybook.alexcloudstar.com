@@ -18,7 +18,7 @@ const UsersList: FC<UsersList> = () => {
           <input
             type="text"
             placeholder="Search users"
-            className="w-full h-full pl-12 border-[1px] border-solid border-[#BFC8E6] rounded-md placeholder:text-[#151B32] placeholder:text-base ml-2"
+            className="w-full h-full pl-12 border border-solid border-[#BFC8E6] rounded-md placeholder:text-[#151B32] placeholder:text-base ml-2"
           />
         </div>
         <div className="filters">
@@ -39,7 +39,7 @@ const UsersList: FC<UsersList> = () => {
               </button>
             </li>
             <li className="mx-3">
-              <button className="text-base  font-mediumtext-[#151B32] p-4">
+              <button className="text-base  font-medium text-[#151B32] p-4">
                 Editors
               </button>
             </li>
@@ -52,15 +52,24 @@ const UsersList: FC<UsersList> = () => {
         </div>
       </header>
       <div className="users">
-        <div className="user w-[327px] h-[208px] bg-[#BFC8E6] rounded-2xl pl-6 pt-6">
+        <div className="user w-[327px] h-[208px] bg-[#FBFCFF] rounded-2xl pl-6 pt-6">
           <div className="flex items-center">
-            <div className="avatar w-[97px] h-[97px] bg-blue-500 rounded-full"></div>
-            <div className="user-info ml-4">
-              <h6 className="username">Lelah Nichols</h6>
-              <span>Troy, MI</span>
-              <Pill text="clothes" color="#fff" background={''} />
-              <Pill text="stem" color="#fff" background={''} />
-              {/* TODO:  Introduce the pill. But first, tweak the Pill Component to look as in desgin (put a prop for remove the bg etc etc) */}
+            <img
+              src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1696&q=80"
+              className="w-[97px] h-[97px] object-cover bg-blue-500 rounded-full"
+            />
+            <div className="user-info mt-4 ml-4">
+              <h6 className="username font-black text-lg">Lelah Nichols</h6>
+              <span className="text-sm font-medium">Troy, MI</span>
+              <div className="flex mt-4">
+                <Pill
+                  text="clothes"
+                  color="#516FD4"
+                  borderColor="#BFC8E6"
+                  style={{ marginRight: 5 }}
+                />
+                <Pill text="stem" color="#516FD4" borderColor="#BFC8E6" />
+              </div>
             </div>
           </div>
         </div>
