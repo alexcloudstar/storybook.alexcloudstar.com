@@ -7,6 +7,7 @@ export type UserCardProps = {
   location: string
   image: string
   tags: string[]
+  attributes: string[]
 }
 
 const UserCard: FC<UserCardProps> = ({ name, location, image, tags }) => (
