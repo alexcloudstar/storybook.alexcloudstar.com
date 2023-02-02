@@ -22,7 +22,11 @@ export default {
       control: {
         type: 'color',
       },
-      defaultValue: '#D7FFE0',
+    },
+    borderColor: {
+      control: {
+        type: 'color',
+      },
     },
   },
 } as ComponentMeta<typeof Pill>
@@ -35,4 +39,12 @@ Basic.args = {
   text: 'Full Time',
   color: '#018C0F',
   background: '#D7FFE0',
+}
+
+export const Border = Template.bind({})
+
+Border.args = {
+  text: 'Full Time',
+  color: '#018C0F',
+  borderColor: '#018C0F',
 }
