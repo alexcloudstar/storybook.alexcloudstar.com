@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import UsersList from './UsersList'
 
 export default {
-  title: 'Components/UsersList',
+  title: 'Components/Users List',
   component: UsersList,
   argTypes: {
     buttons: {

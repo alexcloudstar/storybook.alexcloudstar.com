@@ -3,8 +3,7 @@ import { create } from '@storybook/theming'
 import '../src/index.css'
 
 const constants = {
-  brandImage:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Node.js_logo_2015.svg/2560px-Node.js_logo_2015.svg.png',
+  brandImage: '/logo.png',
   brandUrl: 'https://alexcloudstar.com',
   brandTitle: 'My custom storybook',
 }
@@ -13,17 +12,17 @@ const lightTheme = create({
   ...constants,
   base: 'light',
   appBg: 'white',
-  colorPrimary: '#FF8C69',
-  colorSecondary: '#FF8C69',
+  colorPrimary: '#00a3ff',
+  colorSecondary: '#00a3ff',
 })
 
 const darkTheme = create({
   ...constants,
   base: 'dark',
-  appBg: '#707780',
-  colorPrimary: '#DBF785',
-  appContentBg: '#707780',
-  barBg: '#656B73',
+  appBg: '#34373b',
+  colorPrimary: '#00a3ff',
+  appContentBg: '#34373b',
+  barBg: '#34373b',
 })
 
 export const parameters = {

@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import InteractiveNavigation from './InteractiveNavigation'
 
 export default {
-  title: 'Components/Navigation/InteractiveNavigation',
+  title: 'Components/Navigation/Interactive Navigation',
   component: InteractiveNavigation,
 } as ComponentMeta<typeof InteractiveNavigation>
 
