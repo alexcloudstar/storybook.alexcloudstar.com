@@ -19,10 +19,10 @@ const lightTheme = create({
 const darkTheme = create({
   ...constants,
   base: 'dark',
-  appBg: '#34373b',
+  appBg: '#393939',
   colorPrimary: '#00a3ff',
-  appContentBg: '#34373b',
-  barBg: '#34373b',
+  appContentBg: '#393939',
+  barBg: '#393939',
 })
 
 export const parameters = {

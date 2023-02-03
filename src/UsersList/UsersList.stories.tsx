@@ -6,6 +6,12 @@ export default {
   title: 'Components/Users List',
   component: UsersList,
   argTypes: {
+    title: {
+      control: {
+        type: 'text',
+      },
+      defaultValue: 'Users',
+    },
     buttons: {
       control: {
         type: 'object',
@@ -95,6 +101,7 @@ const Template: ComponentStory<typeof UsersList> = (args) => (
 export const Basic = Template.bind({})
 
 Basic.args = {
+  title: 'Users',
   users: [
     {
       name: 'Lelah Nichols',

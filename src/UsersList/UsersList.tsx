@@ -9,11 +9,12 @@ export type ButtonProps = {
 }
 
 export type UsersListProps = {
+  title: string
   buttons: ButtonProps[]
   users: UserCardProps[]
 }
 
-const UsersList: FC<UsersListProps> = ({ buttons, users }) => {
+const UsersList: FC<UsersListProps> = ({ title, buttons, users }) => {
   const [activeButton, setActiveButton] = useState<ButtonProps>(buttons[1])
   const [searchValue, setSearchValue] = useState<string>('')
   const [filteredUsers, setFilteredUsers] = useState<UserCardProps[]>(users)
@@ -44,7 +45,7 @@ const UsersList: FC<UsersListProps> = ({ buttons, users }) => {
   return (
     <div className="max-w-[1213px] px-24 rounded-3xl flex flex-col">
       <h5 className="text-[#151B32] dark:text-white text-3xl font-black mb-14">
-        Users
+        {title}
       </h5>
       <header className="flex items-center justify-between mb-[70px]">
         <div className="max-w-[327px] h-[56px] relative">
