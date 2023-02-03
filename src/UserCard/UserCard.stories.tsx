@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import UserCard from './UserCard'
 
 export default {
-  title: 'Components/UserCard',
+  title: 'Components/User Card',
   component: UserCard,
   argTypes: {
     name: {

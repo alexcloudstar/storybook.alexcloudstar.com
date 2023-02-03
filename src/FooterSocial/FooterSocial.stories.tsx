@@ -29,7 +29,7 @@ const defaultValues = {
 }
 
 export default {
-  title: 'Components/FooterSocial',
+  title: 'Components/Footer Social',
   component: FooterSocial,
   argTypes: {
     logo: {
