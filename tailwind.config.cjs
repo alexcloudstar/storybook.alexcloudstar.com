@@ -4,6 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        black: {
+          DEFAULT: '#393939',
+        },
         salmon: {
           DEFAULT: '#FF8C69',
           50: '#FFFFFF',
