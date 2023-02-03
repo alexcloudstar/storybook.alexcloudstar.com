@@ -42,7 +42,7 @@ const UsersList: FC<UsersListProps> = ({ buttons, users }) => {
   }
 
   return (
-    <div className="max-w-[1213px] h-[830px] px-24 rounded-3xl flex flex-col">
+    <div className="max-w-[1213px] px-24 rounded-3xl flex flex-col">
       <h5 className="text-[#151B32] text-3xl font-black mb-14">Users</h5>
       <header className="flex items-center justify-between mb-[70px]">
         <div className="max-w-[327px] h-[56px] relative">
