@@ -39,18 +39,19 @@ const StaffCard: FC<StaffCardProps> = ({
       <h6 className="font-normal text-base mb-5">{role}</h6>
       <div className="flex items-center">
         {links?.map((link, index, links) => (
-          <div
-            className={`flex items-center mr-6 ${
+          <a
+            href={link.url}
+            className={`flex items-center mr-6 text-black ${
               links.length - 1 !== link.id
                 ? ''
                 : 'relative before:absolute before:h-1 before:w-1 before:bg-black before:-left-3.5 before:rounded-full'
             }`}
             key={link.id}
+            target="_blank"
           >
             {link.icon}
-
             <span className="text-base">{link.text}</span>
-          </div>
+          </a>
         ))}
       </div>
     </div>
