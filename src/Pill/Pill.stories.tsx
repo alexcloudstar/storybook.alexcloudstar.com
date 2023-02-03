@@ -37,14 +37,14 @@ export const Basic = Template.bind({})
 
 Basic.args = {
   text: 'Full Time',
-  color: '#018C0F',
-  background: '#D7FFE0',
+  color: '#fff',
+  background: '#00a3ff',
 }
 
 export const Border = Template.bind({})
 
 Border.args = {
   text: 'Full Time',
-  color: '#018C0F',
-  borderColor: '#018C0F',
+  color: '#00a3ff',
+  borderColor: '#00a3ff',
 }

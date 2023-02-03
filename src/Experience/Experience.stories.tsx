@@ -5,8 +5,8 @@ import Experience from './Experience'
 const defaultValues = {
   pillProps: {
     text: 'Full Time',
-    color: '#018C0F',
-    background: '#D7FFE0',
+    color: '#fff',
+    background: '#00a3ff',
   },
   position: 'Senior Full-Stack',
   company: 'Alex Cloudstar',

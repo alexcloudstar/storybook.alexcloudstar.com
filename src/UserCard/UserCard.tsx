@@ -10,7 +10,7 @@ export type UserCardProps = {
 }
 
 const UserCard: FC<UserCardProps> = ({ name, location, image, tags }) => (
-  <div className="w-[327px] h-[208px] bg-[#FBFCFF] rounded-2xl pl-6 pt-6 border-solid border border-[#BFC8E5] hover:shadow-[0px_8px_23px_0px_rgba(218,224,249,1)] hover:shadow-[#DAE0F9] transition-all duration-300 cursor-pointer">
+  <div className="w-[327px] h-[208px] bg-[#FBFCFF] rounded-2xl pl-6 pt-6 border-solid border border-primary hover:shadow-[0px_8px_23px_0px_#00a3ff] hover:shadow-primary transition-all duration-300 cursor-pointer">
     <div className="flex items-center">
       <img
         src={image}
@@ -24,8 +24,8 @@ const UserCard: FC<UserCardProps> = ({ name, location, image, tags }) => (
           {tags?.map((targ, index) => (
             <Pill
               text={targ}
-              color="#516FD4"
-              borderColor="#BFC8E6"
+              color="#00a3ff"
+              borderColor="#00a3ff"
               key={index}
               style={{ width: 'fit-content' }}
             />
