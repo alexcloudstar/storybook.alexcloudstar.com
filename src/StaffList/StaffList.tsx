@@ -2,7 +2,7 @@ import { FC, useState } from 'react'
 import StaffCard, { type StaffCardProps } from '../StaffCard/StaffCard'
 
 export type StaffListProps = {
-  title: string
+  title?: string
   users: StaffCardProps[]
 }
 

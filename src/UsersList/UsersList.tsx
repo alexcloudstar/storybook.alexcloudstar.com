@@ -9,7 +9,7 @@ export type ButtonProps = {
 }
 
 export type UsersListProps = {
-  title: string
+  title?: string
   buttons: ButtonProps[]
   users: UserCardProps[]
 }
