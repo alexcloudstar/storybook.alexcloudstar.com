@@ -12,17 +12,17 @@ const lightTheme = create({
   ...constants,
   base: 'light',
   appBg: 'white',
-  colorPrimary: '#FF8C69',
-  colorSecondary: '#FF8C69',
+  colorPrimary: '#00a3ff',
+  colorSecondary: '#00a3ff',
 })
 
 const darkTheme = create({
   ...constants,
   base: 'dark',
-  appBg: '#707780',
-  colorPrimary: '#DBF785',
-  appContentBg: '#707780',
-  barBg: '#656B73',
+  appBg: '#34373b',
+  colorPrimary: '#00a3ff',
+  appContentBg: '#34373b',
+  barBg: '#34373b',
 })
 
 export const parameters = {

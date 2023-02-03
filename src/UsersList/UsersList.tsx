@@ -43,7 +43,9 @@ const UsersList: FC<UsersListProps> = ({ buttons, users }) => {
 
   return (
     <div className="max-w-[1213px] px-24 rounded-3xl flex flex-col">
-      <h5 className="text-[#151B32] text-3xl font-black mb-14">Users</h5>
+      <h5 className="text-[#151B32] dark:text-white text-3xl font-black mb-14">
+        Users
+      </h5>
       <header className="flex items-center justify-between mb-[70px]">
         <div className="max-w-[327px] h-[56px] relative">
           <GoSearch className="absolute top-1/2 left-4 translate-y-[-50%] w-[32px] h-[32px]" />
@@ -63,7 +65,7 @@ const UsersList: FC<UsersListProps> = ({ buttons, users }) => {
                   className={`text-base font-medium p-4 ${
                     id === activeButton.id
                       ? 'bg-[#849FFF] rounded-lg text-[#fff]'
-                      : 'text-[#151B32]'
+                      : 'text-[#151B32] dark:text-white'
                   }`}
                   onClick={() => handleButtonClick({ id, text })}
                 >
