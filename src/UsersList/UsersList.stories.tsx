@@ -108,7 +108,7 @@ Basic.args = {
       name: 'Jesus Weiss',
       location: 'Forth Worth, TX',
       image:
-        'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1696&q=80',
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
       tags: ['headset', 'gadget', 'speed', 'winter'],
       attributes: ['reputation', 'editors', 'moderators'],
     },
