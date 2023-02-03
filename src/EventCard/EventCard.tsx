@@ -6,6 +6,7 @@ export type EventCardProps = {
   time: string
   title: string
   description: string
+  backgroundColor?: string
   onClick: () => void
 }
 
@@ -14,11 +15,15 @@ const EventCard: FC<EventCardProps> = ({
   time,
   title,
   description,
+  backgroundColor = '#ECEFF8',
   onClick,
 }) => (
-  <div className="bg-black dark:bg-white max-w-screen-lg rounded-3xl p-5 flex flex-row items-baseline justify-between">
+  <div className="bg-black dark:bg-white max-w-screen-lg rounded-3xl p-5 flex flex-row items-baseline justify-between mb-4">
     <div className="flex flex-row items-center">
-      <div className="bg-[#ECEFF8] w-[152px] h-[133px] flex items-center justify-center flex-col font-bold rounded-xl">
+      <div
+        className="w-[152px] h-[133px] flex items-center justify-center flex-col font-bold rounded-xl"
+        style={{ backgroundColor }}
+      >
         <h5 className="text-lg mb-3 uppercase">{date}</h5>
         <h6 className="text-4xl">{time}</h6>
       </div>

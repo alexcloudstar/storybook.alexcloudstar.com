@@ -10,6 +10,7 @@ export default {
     time: { control: 'text' },
     title: { control: 'text' },
     description: { control: 'text' },
+    backgroundColor: { control: 'color' },
     onClick: { action: 'clicked' },
   },
 } as ComponentMeta<typeof EventCard>
@@ -24,6 +25,7 @@ Basic.args = {
   date: 'Today',
   time: '17:00',
   title: 'Bergen International Film Festival',
+  backgroundColor: '#ECEFF8',
   description:
     'Films from all over the world gather all film enthusiasts for unique moments at the Bergen International Film Festival.',
   onClick: () => console.log('Added to calendar successfully! 🎉'),
