@@ -16,6 +16,7 @@ const UserCard: FC<UserCardProps> = ({ name, location, image, tags }) => (
         src={image}
         className="w-[97px] h-[97px] object-cover bg-blue-500 rounded-full"
       />
+
       <div className="mt-4 ml-4">
         <h6 className="font-black text-lg">{name}</h6>
         <span className="text-sm font-medium">{location}</span>

@@ -24,14 +24,14 @@ const Avatar: FC<AvatarProps> = ({
 }) => {
   useEffect(() => {
     document.documentElement.style.setProperty(
-            '--borderWidth',
-            `${borderWidth}px` ?? '20'
-            )
+      '--borderWidth',
+      `${borderWidth}px` ?? '20'
+    )
 
     document.documentElement.style.setProperty(
-            '--borderHeight',
-            `${borderWidth}px` ?? '20'
-            )
+      '--borderHeight',
+      `${borderWidth}px` ?? '20'
+    )
   }, [borderWidth])
 
   useEffect(() => {
@@ -40,28 +40,26 @@ const Avatar: FC<AvatarProps> = ({
 
   useEffect(() => {
     document.documentElement.style.setProperty(
-            '--rounded',
-            rounded ? '50%' : '0'
-            )
+      '--rounded',
+      rounded ? '50%' : '0'
+    )
 
     if (rounded && !effect) {
       document.documentElement.style.setProperty(
-              '--top',
-              `${(-1 * borderWidth) / 2}px`
-              )
+        '--top',
+        `${(-1 * borderWidth) / 2}px`
+      )
 
       document.documentElement.style.setProperty(
-              '--left',
-              `${(-1 * borderWidth) / 2}px`
-              )
+        '--left',
+        `${(-1 * borderWidth) / 2}px`
+      )
     }
 
     if (!rounded && !effect) {
       document.documentElement.style.setProperty('--top', '0')
 
       document.documentElement.style.setProperty('--left', '0')
-
-      console.log(123)
     }
 
     if (!rounded && effect) {
@@ -72,26 +70,26 @@ const Avatar: FC<AvatarProps> = ({
   }, [rounded, borderWidth])
 
   return (
-          <div
-            className={styles.gradientBorder}
-            style={{
-            width: `${width}px`,
-              height: `${height}px`,
-            }}
-            >
-            <img
-              src={src}
-              alt={alt}
-              className="object-cover"
-              width={width}
-              height={height}
-              style={{
-              width: `${width}px`,
-                height: `${height}px`,
-              }}
-            />
-          </div>
-          )
+    <div
+      className={styles.gradientBorder}
+      style={{
+        width: `${width}px`,
+        height: `${height}px`,
+      }}
+    >
+      <img
+        src={src}
+        alt={alt}
+        className="object-cover"
+        width={width}
+        height={height}
+        style={{
+          width: `${width}px`,
+          height: `${height}px`,
+        }}
+      />
+    </div>
+  )
 }
 
 export default Avatar
