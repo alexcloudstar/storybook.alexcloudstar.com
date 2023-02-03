@@ -7,7 +7,7 @@ export type ButtonProps = {
 
 const Button: FC<ButtonProps> = ({ label, icon = '!' }) => {
   return (
-    <button className="bg-salmon-400 text-gray-50 py-3 px-1.5 hover:bg-salmon-500 transition-color dark:bg-pale-lime-400 dark:text-gray-600 dark:hover:bg-pale-lime-500">
+    <button className="text-base font-medium p-4 rounded-md bg-primary text-white hover:bg-secondary hover:text-white transition-all duration-300">
       {label} {icon}
     </button>
   )

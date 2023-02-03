@@ -24,17 +24,14 @@ const FooterSocial: FC<FooterSocialProps> = ({
       <div className="flex items-center">
         {phone ? (
           <span className="mx-4">
-            <a href={`tel:${phone}`} className="text-gray-700 dark:text-white">
+            <a href={`tel:${phone}`} className="text-black dark:text-white">
               {phone}
             </a>
           </span>
         ) : null}
         {email ? (
           <span className="mx-4">
-            <a
-              href={`mailto:${email}`}
-              className="text-gray-700 dark:text-white"
-            >
+            <a href={`mailto:${email}`} className="text-black dark:text-white">
               {email}
             </a>
           </span>
@@ -44,7 +41,7 @@ const FooterSocial: FC<FooterSocialProps> = ({
             {social.map((item) => (
               <a
                 href={item.url}
-                className="text-gray-700 mx-4 dark:text-white text-3xl"
+                className="text-black mx-4 dark:text-white text-3xl"
               >
                 {item.icon}
               </a>

@@ -24,7 +24,7 @@ const StaffCard: FC<StaffCardProps> = ({
   classes,
 }) => (
   <div className={`flex mr-9 ${classes}`}>
-    <div className="w-[100] h-[100] object-cover bg-blue-500 rounded-full"></div>
+    <div className="w-[100] h-[100] object-cover bg-primary rounded-full"></div>
     <Avatar
       src={avatar}
       alt={`${name} avatar`}
@@ -38,7 +38,7 @@ const StaffCard: FC<StaffCardProps> = ({
       <h5 className="font-bold text-xl mb-2">{name}</h5>
       <h6 className="font-normal text-base mb-5">{role}</h6>
       <div className="flex items-center">
-        {links?.map((link, index, links) => (
+        {links?.map((link, _, links) => (
           <a
             href={link.url}
             className={`flex items-center mr-6 text-black ${

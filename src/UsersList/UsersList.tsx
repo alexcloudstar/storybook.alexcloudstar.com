@@ -9,7 +9,7 @@ export type ButtonProps = {
 }
 
 export type UsersListProps = {
-  title: string
+  title?: string
   buttons: ButtonProps[]
   users: UserCardProps[]
 }
@@ -44,7 +44,7 @@ const UsersList: FC<UsersListProps> = ({ title, buttons, users }) => {
 
   return (
     <div className="max-w-[1213px] px-24 rounded-3xl flex flex-col">
-      <h5 className="text-[#151B32] dark:text-white text-3xl font-black mb-14">
+      <h5 className="text-black dark:text-white text-3xl font-black mb-14">
         {title}
       </h5>
       <header className="flex items-center justify-between mb-[70px]">
@@ -53,7 +53,7 @@ const UsersList: FC<UsersListProps> = ({ title, buttons, users }) => {
           <input
             type="text"
             placeholder="Search users"
-            className="w-full h-full pl-12 border border-solid border-[#BFC8E6] rounded-md placeholder:text-[#151B32] placeholder:text-base ml-2"
+            className="w-full h-full pl-12 border border-solid border-secondary rounded-md placeholder:text-black placeholder:text-base ml-2 outline-primary"
             value={searchValue}
             onChange={handleSearch}
           />
@@ -63,10 +63,10 @@ const UsersList: FC<UsersListProps> = ({ title, buttons, users }) => {
             {buttons?.map(({ id, text }) => (
               <li className="mx-3" key={id}>
                 <button
-                  className={`text-base font-medium p-4 ${
+                  className={`text-base font-medium p-4 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 ${
                     id === activeButton.id
-                      ? 'bg-[#849FFF] rounded-lg text-[#fff]'
-                      : 'text-[#151B32] dark:text-white'
+                      ? 'bg-primary text-white'
+                      : 'text-black dark:text-white'
                   }`}
                   onClick={() => handleButtonClick({ id, text })}
                 >

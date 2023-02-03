@@ -45,17 +45,17 @@ const Card: FC<CardProps> = ({
       <h3 className="text-3xl font-medium mt-7">{title}</h3>
       <p
         className={`text-lg font-light mt-5 ${subTitle ? '' : 'pb-7'}`}
-        style={{ color: color ? color : '#666666' }}
+        style={{ color: color ? color : '#393939' }}
       >
         {description}
       </p>
     </div>
     {subTitle && subDescription ? (
       <div className="px-6 flex flex-row py-7">
-        <h4 className="font-regular text-base text-[#42446E] dark:text-white whitespace-nowrap">
+        <h4 className="font-regular text-base text-black dark:text-white whitespace-nowrap">
           {subTitle}
         </h4>
-        <span className="text-base ml-2 font-light text-[#42446E] dark:text-white whitespace-normal">
+        <span className="text-base ml-2 font-light text-black dark:text-white whitespace-normal">
           {subDescription}
         </span>
       </div>
@@ -65,7 +65,7 @@ const Card: FC<CardProps> = ({
         <a
           href={links.link1?.url}
           className="flex items-center"
-          style={{ color: color ? color : '#000' }}
+          style={{ color: color ? color : '#393939' }}
         >
           {links.link1?.icon ? (
             <span className="mr-4">{links.link1.icon}</span>
@@ -75,7 +75,7 @@ const Card: FC<CardProps> = ({
         <a
           href={links.link2?.url}
           className="flex items-center"
-          style={{ color: color ? color : '#000' }}
+          style={{ color: color ? color : '#393939' }}
         >
           {links.link2?.icon ? (
             <span className="mr-4">{links.link2.icon}</span>
