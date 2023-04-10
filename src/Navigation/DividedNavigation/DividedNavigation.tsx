@@ -18,7 +18,7 @@ const DividedNavigation: FC<DividedNavigationProps> = ({
   }, [color])
 
   return (
-    <nav className={classnames}>
+    <nav className={classnames || ''}>
       <ul>
         {links?.map((link, index) => (
           <li key={index}>
