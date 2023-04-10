@@ -1,7 +1,7 @@
-import React, { FC, useEffect } from 'react'
+import { FC } from 'react'
 
-import classes from './InteractiveNavigation.module.css'
 import { NavigationProps } from '../types'
+import classes from './InteractiveNavigation.module.css'
 
 type InteractiveNavigationProps = NavigationProps & {
   color?: string

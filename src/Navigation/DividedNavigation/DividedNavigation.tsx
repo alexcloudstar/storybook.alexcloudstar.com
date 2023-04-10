@@ -1,7 +1,7 @@
-import React, { FC, useEffect } from 'react'
+import { FC } from 'react'
 
-import classes from './DividedNavigation.module.css'
 import { NavigationProps } from '../types'
+import classes from './DividedNavigation.module.css'
 
 type DividedNavigationProps = NavigationProps & {
   color?: string
