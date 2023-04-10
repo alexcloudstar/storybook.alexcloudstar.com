@@ -2,13 +2,13 @@
   --color: #232323;
 }
 
-nav {
+.navigation {
   display: flex;
   gap: 25px;
   align-items: center;
 }
 
-ul {
+.ul {
   display: flex;
   gap: 25px;
   list-style: none;

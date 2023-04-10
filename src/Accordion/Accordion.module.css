@@ -1,0 +1,58 @@
+.container {
+  display: inline-flex;
+  padding: 10px 50px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container span {
+  padding-right: 15px;
+}
+
+.animation {
+  transform: rotate(0deg);
+}
+
+.animationOff {
+  transform: rotate(0deg);
+  animation: off 0.5s linear;
+}
+
+.animationOn {
+  transform: rotate(180deg);
+  animation: on 0.5s linear;
+}
+
+@keyframes on {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes off {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
