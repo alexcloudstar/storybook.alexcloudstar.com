@@ -27,7 +27,9 @@ const DividedNavigation: FC<DividedNavigationProps> = ({
               className={`${classes.link} ${isActive ? 'active' : ''}`}
             >
               {link.name}
-              <span className={classes.divide}></span>
+              {index !== links.length - 1 && (
+                <span className={classes.divide}></span>
+              )}
             </a>
           </li>
         ))}
