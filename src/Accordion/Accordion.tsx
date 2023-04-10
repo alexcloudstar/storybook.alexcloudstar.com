@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
+import { ImArrowDown2 } from 'react-icons/im'
 import classes from './Accordion.module.css'
-import { FaLongArrowAltDown } from 'react-icons/fa'
 
 export type AccordionProps = {
   title: string
@@ -42,7 +42,7 @@ const Accordion: FC<AccordionProps> = ({
           >
             {title}
           </span>
-          <FaLongArrowAltDown
+          <ImArrowDown2
             style={{
               color: textColor,
             }}
