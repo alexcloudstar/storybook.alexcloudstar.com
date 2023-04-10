@@ -1,6 +1,6 @@
 {
   "name": "@alexcloudstar/story-ui",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "type": "module",
   "homepage": "https://storybook.alexcloudstar.com/",
   "license": "MIT",
@@ -29,9 +29,7 @@
     "dev": "start-storybook -p 6006 -s public",
     "build": "tsc && vite build",
     "build-storybook": "build-storybook",
-    "serve": "serve storybook-static",
-    "version": "npm version -- version ",
-    "publish": "npm publish"
+    "serve": "serve storybook-static"
   },
   "dependencies": {
     "react": "^18.2.0",
