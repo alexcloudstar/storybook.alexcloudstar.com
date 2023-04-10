@@ -29,7 +29,9 @@
     "dev": "start-storybook -p 6006 -s public",
     "build": "tsc && vite build",
     "build-storybook": "build-storybook",
-    "serve": "serve storybook-static"
+    "serve": "serve storybook-static",
+    "version": "npm version -- version ",
+    "publish": "npm publish"
   },
   "dependencies": {
     "react": "^18.2.0",
