@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import InteractiveNavigation from './InteractiveNavigation'
+import { links } from '../constants'
 
 export default {
   title: 'Components/Navigation/Interactive Navigation',
@@ -15,4 +16,5 @@ export const Default = Template.bind({})
 
 Default.args = {
   color: '#00b2ff',
+  links: links,
 }

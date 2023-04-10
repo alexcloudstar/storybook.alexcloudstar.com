@@ -1,44 +1,35 @@
 import React, { FC, useEffect } from 'react'
 
 import classes from './InteractiveNavigation.module.css'
+import { NavigationProps } from '../types'
 
-type InteractiveNavigationProps = {
+type InteractiveNavigationProps = NavigationProps & {
   color?: string
 }
 
-const InteractiveNavigation: FC<InteractiveNavigationProps> = ({ color }) => {
+const InteractiveNavigation: FC<InteractiveNavigationProps> = ({
+  color,
+  links,
+  isActive,
+  classnames,
+}) => {
   useEffect(() => {
     document.documentElement.style.setProperty('--color', color || '#000')
   }, [color])
 
   return (
-    <nav>
+    <nav className={classnames}>
       <ul>
-        <li>
-          <a href="#" className={classes.link}>
-            Store
-          </a>
-        </li>
-        <li>
-          <a href="#" className={classes.link}>
-            Mac
-          </a>
-        </li>
-        <li>
-          <a href="#" className={classes.link}>
-            iPad
-          </a>
-        </li>
-        <li>
-          <a href="#" className={classes.link}>
-            iPhone
-          </a>
-        </li>
-        <li>
-          <a href="#" className={classes.link}>
-            Watch
-          </a>
-        </li>
+        {links?.map((link, index) => (
+          <li key={index}>
+            <a
+              href={link.link}
+              className={`${classes.link} ${isActive ? 'active' : ''}`}
+            >
+              {link.name}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   )
