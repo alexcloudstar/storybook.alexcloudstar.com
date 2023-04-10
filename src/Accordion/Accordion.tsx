@@ -52,7 +52,7 @@ const Accordion: FC<AccordionProps> = ({
           />
         </div>
       </div>
-      {isOpen && <div className={`${contentClassNames}`}>{content}</div>}
+      {isOpen && <div className={`${contentClassNames || ''}`}>{content}</div>}
     </>
   )
 }

@@ -4,14 +4,14 @@
   --color: #00a3ff;
 }
 
-nav {
+.navigation {
   display: flex;
   gap: 25px;
   align-items: center;
   color: rgb(0 163 255 / 50%);
 }
 
-ul {
+.ul {
   display: flex;
   gap: 25px;
   list-style: none;
