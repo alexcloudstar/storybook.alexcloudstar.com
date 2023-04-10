@@ -1,6 +1,6 @@
 import './index.css'
 
-export { InteractiveNavigation } from './Navigation'
+export { InteractiveNavigation, DividedNavigation } from './Navigation'
 export { Button } from './Button'
 export { Pill } from './Pill'
 export { Card } from './Card'
