@@ -1,0 +1,29 @@
+:root {
+  --color: #232323;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  color: var(--color);
+}
+
+.divide {
+  position: absolute;
+  right: -10px;
+  width: 2px;
+  height: 100%;
+  background-color: var(--color);
+}
